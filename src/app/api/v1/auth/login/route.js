@@ -4,6 +4,8 @@ import bcrypt from 'bcryptjs';
 import { signToken } from '@/lib/jwt';
 import { errorResponse, successResponse } from '@/lib/api-response';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(req) {
   try {
     const body = await req.json();
