@@ -3,6 +3,8 @@ import { getAuthUser } from '@/lib/auth-helper';
 import { errorResponse, successResponse } from '@/lib/api-response';
 import { getCache, setCache, clearCachePattern } from '@/lib/redis';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(req) {
   try {
     const user = await getAuthUser(req);
